@@ -1,0 +1,182 @@
+
+\documentclass[a4paper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=.1in, bottom=.1in]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by:
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{5.25pt}{5.25pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}\\
+\Huge{Yash Shah} \\[2pt]
+\href{https://github.com/yash161}{\raisebox{-0.05\height}\faGithub\ yash161} \ $|$
+\href{https://www.linkedin.com/in/yash-shah-b7129b1bb/}{\raisebox{-0.05\height}\faLinkedin\ yash-shah} \ $|$ \ 
+\href{mailto:yashshah3698@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ yashshah3698@gmail.com} \ $|$ \ 
+\href{tel:+12133018249}{\raisebox{-0.05\height}\faMobile \ 2133018249 (Open to Relocate)} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{California State University, Los Angeles, United States} & \hfill \color[HTML]{371e77} August 2024 - August 2026 \\
+\color[HTML]{371e77} M.S. in Computer Science & \hfill \color[HTML]{4B28A4}  \\
+\multicolumn{2}{@{}X@{}}{Relevant Coursework: Advanced AI, Advanced Software Engineering, Computer and Network Security}
+\end{tabularx}
+\setlength{\parskip}{2pt}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\color[HTML]{1C033C} \textbf{Ganpat University, Gujarat, India} & \hfill \color[HTML]{371e77} July 2019 - June 2023 \\
+\color[HTML]{371e77} B.Tech. in Computer Science \& Engineering (Cloud-Based Applications) & \hfill \color[HTML]{4B28A4} \textit{\textbf{CGPA: 8.99/10}} \\
+\multicolumn{2}{@{}X@{}}{Relevant Coursework: Cloud Computing, Machine Learning, Cloud Security, Data Mining \& Warehousing, Software Engineering, Computer Networks, Algorithm Design, Microservices, Virtualization, Operating Systems, DBMS, Data Structures, Compiler Design, IT Infrastructure Management, Web App Development}
+\end{tabularx}
+\vspace{-3mm}
+
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Squadron Technology, Ahmedabad} \hfill \color[HTML]{371e77} Aug 2022 - Jun 2024 \\[1pt]
+\color[HTML]{371e77}\textbf{\textit{Cloud Data and DevOps Engineer: Python, C++, Linux, AWS, GitHub Actions, Terraform}} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+\item \textbf{Enhanced performance} of a Python-based ETL tool integrated with Azure Blob Storage, increasing data processing speed by \textbf{30\%}, demonstrating expertise in \textbf{debugging, profiling, and numerical analysis}.
+\item \textbf{Optimized} web scraping systems with AWS and Docker, reducing data retrieval time by \textbf{50\%}, showcasing skills in \textbf{software development} and \textbf{performance improvement}.
+\item \textbf{Developed} a high-availability database system using Percona XtraDB and ProxySQL, minimizing downtime by \textbf{40\%} and ensuring \textbf{scalability and reliability}.
+\item \textbf{Built and automated} CI/CD pipelines with GitHub Actions, streamlining deployment processes and accelerating release cycles by \textbf{70\%}, leveraging \textbf{Linux operating systems}.
+\item \textbf{Implemented} real-time data streaming with Apache Kafka to enhance operational efficiency, reducing latency and optimizing workflows for cost savings.
+\end{itemize}
+\end{minipage}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Squadron Technology, Ahmedabad} \hfill \color[HTML]{371e77} Jan 2022 - Jul 2022 \\[1pt]
+\color[HTML]{371e77}\textbf{\textit{Cloud Data and DevOps Intern: Python, AWS Lambda, CI/CD, Numerical Methods}} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+\item \textbf{Developed} an automated hospital billing system, improving data management by \textbf{25\%}, and utilized \textbf{dummy data generation} to validate system performance.
+\item \textbf{Architected} a serverless solution with AWS Lambda and DynamoDB, automating workflows and reducing deployment cycles by \textbf{60\%} with GitLab CI/CD pipelines.
+\end{itemize}
+\end{minipage}
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Ownux Infosec, Gujarat, India} \hfill \color[HTML]{371e77} May 2021 - Jun 2021 \\[1pt]
+\color[HTML]{371e77}\textbf{\textit{Software Development Intern: Flask, Python, AWS, CUDA}} \\[1pt]
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep, after=\strut, leftmargin=2em, itemsep=2pt]
+\item \textbf{Created} a Flask API with Selenium to automate social media verification tasks, boosting efficiency by \textbf{40\%}, demonstrating expertise in \textbf{web automation}.
+\item \textbf{Deployed} scalable applications on AWS ECS containers, ensuring high availability and performance under increased user demand.
+\end{itemize}
+\end{minipage}
+\end{tabularx}
+
+
+
+
+
+\section{Project Work}
+\begin{itemize}[nosep,after=\strut, leftmargin=2em, itemsep=2pt]
+\item \textbf{\href{https://github.com/yash161/Acten3_Etl}{Acten3 ETL Pipeline Development (Jan 2024 – Mar 2024): Python, Dask, TigerGraph, Azure}} \\ Built a scalable ETL pipeline using Dask for efficient data validation and processing. Leveraged TigerGraph for advanced analytics and Azure Blob Storage for cloud data management. Automated validation with Pydantic, generating detailed JSON reports. Demonstrated expertise in Python, cloud integration, and database optimization.
+\item \textbf{\href{https://github.com/yash161/Scrapper.git}{Web Scraper Optimization and AWS Deployment (Jan 2023 – Mar 2023): Python, AWS ECS, Terraform}} \\ Optimized a Python-based web scraper using multiprocessing to boost performance and accuracy. Deployed on AWS ECS via Terraform for scalable and automated infrastructure. Highlighted skills in cloud deployment, automation, and performance tuning.
+\end{itemize}
+
+
+
+\vspace{-1mm}
+\section{Skills}
+\color[HTML]{1C033C}\textbf{Programming Languages \& Tools:} C/C++, Python, Go, Java, Golang, CUDA,  Terraform, AWS (Lambda, ECS), Azure (Blob Storage), Docker, GitHub Actions, MySQL, Kafka, Debuggers, Profilers\\[1pt]
+\color[HTML]{1C033C}\textbf{Technologies:} Cloud Platforms (AWS, Azure), CI/CD Pipelines, DevOps Practices, Infrastructure as Code (IaC), Real-Time Data Processing, Data Structures and Algorithms,  GPU programming (experience with Kokkos, Raja desirable)\\[1pt]
+\color[HTML]{1C033C}\textbf{Databases:} MySQL, DynamoDB\\[1pt]
+\color[HTML]{1C033C}\textbf{Problem Solving:} Proven ability in developing automated ETL pipelines and optimizing data workflows;  Experience with numerical methods and performance improvement techniques for simulation software.\\[1pt]
+\vspace{-6mm}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Achievements}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\begin{minipage}[t]{\linewidth}
+\begin{itemize}[nosep,after=\strut, leftmargin=2em]
+\item \textbf{Finalist in Odoo Hackathon:} Demonstrated problem-solving and innovation in software development under tight deadlines, showcasing initiative and technical acumen. 
+\item \textbf{HashiCorp Terraform Associate Certified:} Validated expertise in Infrastructure-as-Code (IaC) and cloud management, with hands-on experience in C++, Python, Linux, and debugging tools.
+\end{itemize}
+\end{minipage}
+\end{tabularx}
+
+
+\end{document}
